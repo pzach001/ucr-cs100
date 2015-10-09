@@ -1,0 +1,54 @@
+#include <iostream>
+#include <string>
+using namespace std;
+class Vehicle {
+    protected:
+    string name;
+    int NumOfSeats;
+    double time;
+    double speed;
+    public:
+    double go(double x) {
+	
+	cout << name << " ";
+        double holder = x*speed;
+        cout << holder << endl;
+	
+    }
+};
+
+class wheels: public Vehicle {
+	int NumOfWheels;
+};
+
+class noWheels:public Vehicle {
+           
+};
+
+class lessthan4wheels:public wheels {
+    
+}; 
+
+class greaterorequal4: public wheels {
+};
+
+class publicwheels :public greaterorequal4 {
+	int fare;
+};
+
+class privatewheels:public greaterorequal4 {    
+};
+
+class WaterVehicle:public noWheels {
+	string shape;
+};
+class AirVehicle:public noWheels {
+        double fuel;
+        double payload;
+};
+int main()
+{
+  publicwheels bus;
+  bus.fare = 1;
+  cout << "bus fare =" << 1 << endl; 
+}

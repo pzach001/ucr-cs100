@@ -1,0 +1,6 @@
+[user]
+	email = pzach001@ucr.edu
+[color]
+	ui = auto
+[core]
+	safecrlf = true
